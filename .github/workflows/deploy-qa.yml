@@ -10,7 +10,7 @@ jobs:
     permissions:
       contents: read
       pull-requests: read
-    uses: bes-innovation/gmd-seed-gh-workflow/.github/workflows/gmd-seed-wfl-sf-deploy.yml@v1
+    uses: bes-innovation/gmd-seed-gh-workflow/.github/workflows/gmd-seed-sf-deploy-wfl.yml@v1
     with:
       environment: qa
       target-org: qa
