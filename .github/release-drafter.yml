@@ -1,29 +1,9 @@
 name-template: 'v$RESOLVED_VERSION'
 tag-template: 'v$RESOLVED_VERSION'
 
-categories:
-  - title: '🚀 Features'
-    labels: ['feature', 'enhancement']
-  - title: '🐛 Fixes'
-    labels: ['fix', 'bug', 'hotfix']
-  - title: '🧹 Chores'
-    labels: ['chore', 'refactor', 'docs']
-
-autolabeler:
-  - label: 'feature'
-    branch: ['^feature/.+']
-  - label: 'hotfix'
-    branch: ['^hotfix/.+']
-  - label: 'fix'
-    branch: ['^fix/.+']
-
+# No categories/labels -- every merged PR shows up, regardless of whether
+# anyone remembered to label it. Simple and complete beats organized and lossy.
 version-resolver:
-  major:
-    labels: ['breaking']
-  minor:
-    labels: ['feature', 'enhancement']
-  patch:
-    labels: ['fix', 'hotfix', 'chore']
   default: patch
 
 change-template: '- $TITLE (#$NUMBER)'
