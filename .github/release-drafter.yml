@@ -1,0 +1,33 @@
+name-template: 'v$RESOLVED_VERSION'
+tag-template: 'v$RESOLVED_VERSION'
+
+categories:
+  - title: '🚀 Features'
+    labels: ['feature', 'enhancement']
+  - title: '🐛 Fixes'
+    labels: ['fix', 'bug', 'hotfix']
+  - title: '🧹 Chores'
+    labels: ['chore', 'refactor', 'docs']
+
+autolabeler:
+  - label: 'feature'
+    branch: ['^feature/.+']
+  - label: 'hotfix'
+    branch: ['^hotfix/.+']
+  - label: 'fix'
+    branch: ['^fix/.+']
+
+version-resolver:
+  major:
+    labels: ['breaking']
+  minor:
+    labels: ['feature', 'enhancement']
+  patch:
+    labels: ['fix', 'hotfix', 'chore']
+  default: patch
+
+change-template: '- $TITLE (#$NUMBER)'
+
+template: |
+  ## Changelog
+  $CHANGES
